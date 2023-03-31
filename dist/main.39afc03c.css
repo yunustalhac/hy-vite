@@ -4,7 +4,24 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", serif;
-  background-color: red;
+}
+
+.buyuklogo {
+  opacity: 1;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 100px;
+}
+
+.blogod {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.butun {
+  opacity: 0;
 }
 
 .Section-title {
@@ -71,6 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .Section-text-img-icon {
@@ -79,6 +97,7 @@ body {
   }
 }
 .Section-text-img-icon:hover {
+  transition: 150ms;
   background-color: rgba(0, 0, 0, 0.3);
   border: 2px solid #80BC00;
 }
@@ -404,7 +423,6 @@ body {
 
 .paragraph {
   color: rgb(10, 38, 72);
-  opacity: 0.5;
   width: 90%;
   display: flex;
   margin-left: auto;
@@ -420,6 +438,12 @@ body {
   margin-bottom: 25px;
   margin-top: 25px;
   font-family: "Inter", serif;
+  opacity: 0.5;
+}
+.paragraph-text:hover {
+  transition: 0.5s;
+  color: #232323;
+  opacity: 1;
 }
 
 .section-proje .box {
@@ -476,6 +500,7 @@ body {
   font-size: 1.6em;
   text-align: center;
   margin-top: 40px;
+  font-weight: bolder;
 }
 @media (min-width: 768px) {
   .section-proje .box .box1 .box-title {
@@ -499,10 +524,10 @@ body {
 }
 @media (min-width: 768px) {
   .section-proje .box .box1 .box-select {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 50px;
     margin-top: 50px;
-    padding-right: 50px;
+    padding-right: 10px;
   }
 }
 .section-proje .box .box1 .box-button {
@@ -560,6 +585,7 @@ body {
   font-size: 1.6em;
   text-align: center;
   margin-top: 40px;
+  font-weight: bolder;
 }
 @media (min-width: 768px) {
   .section-proje .box .box2 .box-title {
@@ -583,10 +609,10 @@ body {
 }
 @media (min-width: 768px) {
   .section-proje .box .box2 .box-select {
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin-bottom: 50px;
     margin-top: 50px;
-    padding-right: 50px;
+    padding-right: 10px;
   }
 }
 .section-proje .box .box2 .box-button {
@@ -679,8 +705,16 @@ body {
   }
 }
 .footer-element .ftr-link .link-item {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
+}
+.footer-element .ftr-link .link-item:hover {
+  transition: 130ms;
+  border-bottom: 2px solid #80BC00;
+}
+
+.bos {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

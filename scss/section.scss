@@ -1,708 +1,747 @@
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Inter",serif;
-    background-color: red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
+
+.buyuklogo {
+  opacity: 1;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 100px;
+}
+
+.blogod {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.butun {
+  opacity: 0;
 }
 
 .Section-title {
-    background: url("/img/arkaplan.png") no-repeat center center / cover;
-    height: 100vh;
-    width: 100%;
+  background: url("/img/arkaplan.png") no-repeat center center / cover;
+  height: 100vh;
+  width: 100%;
 
-    &-element {
+  &-element {
 
-        &-logo {
-            height: 50px;
-            position: relative;
-            top: 20px;
-            left: 10px;
+    &-logo {
+      height: 50px;
+      position: relative;
+      top: 20px;
+      left: 10px;
 
-            @include mq() {
-                height: 75px;
-                top: 30px;
-            }
-        }
-
-        &-title {
-            height: 78vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &-svg {
-                height: 100%;
-                width: 100%;
-
-                @include mq() {
-                    height: 400px;
-                    top: 30px;
-                }
-            }
-        }
-
-        &-text {}
+      @include mq() {
+        height: 75px;
+        top: 30px;
+      }
     }
+
+    &-title {
+      height: 78vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-svg {
+        height: 100%;
+        width: 100%;
+
+        @include mq() {
+          height: 400px;
+          top: 30px;
+        }
+      }
+    }
+
+    &-text {
+    }
+  }
 }
 
 .Section-text {
+  margin-top: 50px;
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-p {
+    color: rgb(115 121 132);
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 50px;
-    max-width: 770px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
 
-    &-p {
-        color: rgb(115 121 132);
-        font-weight: 400;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    &-icon {
+      background-color: rgba(white, .3);
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @include mq() {
+        height: 75px;
+        width: 75px;
+      }
+
+      &:hover {
+        transition: 150ms;
+        background-color: rgba(black, 0.3);
+        border: 2px solid #80BC00;
+      }
     }
 
-    &-img {
+    &-photo {
+      width: 100%;
+      border-radius: 10px;
+
+      @include mq() {
+        width: 70%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 50px;
-        position: relative;
-
-        &-icon {
-            background-color: rgba(white, .3);
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            border-radius: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include mq() {
-                height: 75px;
-                width: 75px;
-            }
-
-            &:hover {
-                background-color: rgba(black, 0.3);
-                border: 2px solid #80BC00;
-            }
-        }
-
-        &-photo {
-            width: 100%;
-            border-radius: 10px;
-
-            @include mq() {
-                width: 70%;
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        &-backicon {
-            position: absolute;
-            z-index: -1;
-        }
-
-        .lightning {
-            height: 150px;
-            width: 150px;
-            position: absolute;
-            left: -30px;
-            bottom: 90px;
-            opacity: 0.5;
-
-            @include mq() {
-                height: 200px;
-                width: 200px;
-                bottom: 180px;
-            }
-        }
-
-        .leaf {
-            height: 150px;
-            width: 150px;
-            position: absolute;
-            left: 150px;
-            top: 100px;
-            opacity: 0.5;
-
-            @include mq() {
-                height: 200px;
-                width: 200px;
-                left: 550px;
-                top: 150px;
-            }
-        }
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
+
+    &-backicon {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .lightning {
+      height: 150px;
+      width: 150px;
+      position: absolute;
+      left: -30px;
+      bottom: 90px;
+      opacity: 0.5;
+
+      @include mq() {
+        height: 200px;
+        width: 200px;
+        bottom: 180px;
+      }
+    }
+
+    .leaf {
+      height: 150px;
+      width: 150px;
+      position: absolute;
+      left: 150px;
+      top: 100px;
+      opacity: 0.5;
+
+      @include mq() {
+        height: 200px;
+        width: 200px;
+        left: 550px;
+        top: 150px;
+      }
+    }
+  }
 }
 
 .section-panel {
 
 
-    &-surec {
-        position: relative;
+  &-surec {
+    position: relative;
 
-        .div {
-            position: relative;
-            height: 150px;
-            display: flex;
-            margin-top: 350px;
-            margin-bottom: 50px;
+    .div {
+      position: relative;
+      height: 150px;
+      display: flex;
+      margin-top: 350px;
+      margin-bottom: 50px;
 
-            @include mq() {
-                margin-top: 50px;
-                margin-bottom: 100px;
-            }
+      @include mq() {
+        margin-top: 50px;
+        margin-bottom: 100px;
+      }
 
-            .surec-panel {
-                height: 60px;
-                position: absolute;
-                bottom: 320px;
-                display: flex;
-                justify-content: center;
-                order: 1;
-                width: 100%;
-
-                @include mq() {
-                    width: 70%;
-                    height: 100px;
-                    display: flex;
-                    justify-content: flex-start;
-                    position: absolute;
-                    top: 50px;
-                    left: 100px;
-                }
-            }
-
-            .surec-panel1 {
-
-                @include mq () {
-                    display: flex;
-                    justify-content: flex-end;
-                }
-            }
-
-
-        }
-
-        &-div1 {
-
-            .card {
-                width: 90%;
-                height: 150px;
-                background-color: rgba(#80BC00, .2);
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-                order: 2;
-                border: 0;
-                color: #80BC00;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 10px;
-                font-size: 0.7em;
-                font-family: "Inter",serif;
-                border-radius: 15px;
-                position: relative;
-
-                @include mq() {
-                    width: 50%;
-                    height: 200px;
-                    margin-left: 0;
-                    margin-right: auto;
-
-                }
-            }
-
-            .surec-panel::after {
-                content: " ";
-                display: block;
-                height: 200px;
-                width: 10px;
-                background-color: rgba(#7B98CE, .3);
-                position: relative;
-                right: 57px;
-                z-index: -1;
-                top: 30px;
-
-                @include mq() {
-                    width: 10px;
-                    height: 120px;
-                    position: relative;
-                    top: -100px;
-                    right: 70px;
-                }
-            }
-
-            .surec-panel::before {
-                content: " ";
-                display: block;
-                height: 150px;
-                width: 10px;
-                background-color: rgba(#7B98CE, .3);
-                position: relative;
-                left: 62px;
-                z-index: -1;
-                bottom: 120px;
-
-                @include mq() {
-                    width: 33.4%;
-                    height: 10px;
-                    position: relative;
-                    top: 50%;
-                }
-
-                @include mq("özel") {
-                    width: 34%;
-                }
-
-                @include mq("özel2") {
-                    width: 35%;
-                }
-
-                @include mq("özel3") {
-                    width: 38%;
-                }
-            }
-        }
-
-        &-div2 {
-
-            .card {
-                width: 90%;
-                height: 150px;
-                background-color: rgba(#80BC00, .2);
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-                border: 0;
-                color: #80BC00;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 10px;
-                font-size: 0.7em;
-                font-family: "Inter",serif;
-                border-radius: 15px;
-
-                @include mq() {
-                    width: 50%;
-                    height: 200px;
-                    margin-left: auto;
-                    margin-right: 0;
-                }
-
-                &-text {
-                    font-family: "Inter",serif;
-                }
-            }
-
-            .surec-panel::after {
-                content: " ";
-                display: block;
-                height: 200px;
-                width: 10px;
-                background-color: rgba(#7B98CE, .3);
-                position: relative;
-                right: 57px;
-                z-index: -1;
-                top: 30px;
-
-                @include mq() {
-                    width: 53.5%;
-                    height: 10px;
-                    position: relative;
-                    top: 50%;
-                }
-
-                @include mq("özel") {
-                    width: 51%;
-                }
-
-                @include mq("özel2") {
-                    width: 47%;
-                }
-
-                @include mq("özel3") {
-                    width: 38%;
-                }
-            }
-
-            .surec-panel::before {
-                content: " ";
-                display: block;
-                height: 150px;
-                width: 10px;
-                background-color: rgba(#7B98CE, .3);
-                position: relative;
-                left: 62px;
-                z-index: -1;
-                bottom: 120px;
-
-                @include mq() {
-                    height: 120px;
-                    width: 10px;
-                    position: relative;
-                    bottom: 100px;
-                    left: 70px;
-                }
-            }
-        }
-    }
-
-    .pano {
+      .surec-panel {
+        height: 60px;
+        position: absolute;
+        bottom: 320px;
         display: flex;
         justify-content: center;
-        position: relative;
+        order: 1;
+        width: 100%;;
 
         @include mq() {
-            padding: 90px;
-            background-image: url("/img/yıldırım.svg"), url("/img/koyuyaprak.svg");
-            background-repeat: no-repeat;
-            background-position-x: 350px, 800px;
-            background-position-y: 20px, 120px;
+          width: 70%;
+          height: 100px;
+          display: flex;
+          justify-content: flex-start;
+          position: absolute;
+          top: 50px;
+          left: 100px;
         }
+      }
 
-        &-card {
-            width: 90%;
-            height: 10em;
-            border-radius: 20px;
-            background-color: #7B98CE;
-            color: #fff;
-            font-family: "Inter",serif;
-            display: flex;
-            align-items: center;
+      .surec-panel1 {
 
-            @include mq() {
-                width: 500px;
-                height: 10em;
-            }
-
-            &-text {
-                text-align: center;
-                font-size: 1.1em;
-                margin: 0;
-                padding: 5px;
-                margin-left: auto;
-                margin-right: auto;
-
-                @include mq() {
-                    padding: 20px;
-                    font-size: 1.4em;
-                }
-            }
+        @include mq() {
+          display: flex;
+          justify-content: flex-end;
         }
+      }
+
+
     }
+
+    &-div1 {
+
+      .card {
+        width: 90%;
+        height: 150px;
+        background-color: rgba(#80BC00, .2);
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        order: 2;
+        border: 0;
+        color: #80BC00;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.7em;
+        font-family: "Inter", serif;
+        border-radius: 15px;
+        position: relative;
+
+        &:hover {
+        }
+
+        @include mq() {
+          width: 50%;
+          height: 200px;
+          margin-left: 0;
+          margin-right: auto;
+
+        }
+      }
+
+      .surec-panel::after {
+        content: " ";
+        display: block;
+        height: 200px;
+        width: 10px;
+        background-color: rgba(#7B98CE, .3);
+        position: relative;
+        right: 57px;
+        z-index: -1;
+        top: 30px;
+
+        @include mq() {
+          width: 10px;
+          height: 120px;
+          position: relative;
+          top: -100px;
+          right: 70px;
+        }
+      }
+
+      .surec-panel::before {
+        content: " ";
+        display: block;
+        height: 150px;
+        width: 10px;
+        background-color: rgba(#7B98CE, .3);
+        position: relative;
+        left: 62px;
+        z-index: -1;
+        bottom: 120px;
+
+        @include mq() {
+          width: 33.4%;
+          height: 10px;
+          position: relative;
+          top: 50%;
+        }
+
+        @include mq("özel") {
+          width: 34%;
+        }
+
+        @include mq("özel2") {
+          width: 35%;
+        }
+
+        @include mq("özel3") {
+          width: 38%;
+        }
+      }
+    }
+
+    &-div2 {
+
+      .card {
+        width: 90%;
+        height: 150px;
+        background-color: rgba(#80BC00, .2);
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0;
+        color: #80BC00;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.7em;
+        font-family: "Inter", serif;
+        border-radius: 15px;
+
+        @include mq() {
+          width: 50%;
+          height: 200px;
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        &-text {
+          font-family: "Inter", serif;
+        }
+      }
+
+      .surec-panel::after {
+        content: " ";
+        display: block;
+        height: 200px;
+        width: 10px;
+        background-color: rgba(#7B98CE, .3);
+        position: relative;
+        right: 57px;
+        z-index: -1;
+        top: 30px;
+
+        @include mq() {
+          width: 53.5%;
+          height: 10px;
+          position: relative;
+          top: 50%;
+        }
+
+        @include mq("özel") {
+          width: 51%;
+        }
+
+        @include mq("özel2") {
+          width: 47%;
+        }
+
+        @include mq("özel3") {
+          width: 38%;
+        }
+      }
+
+      .surec-panel::before {
+        content: " ";
+        display: block;
+        height: 150px;
+        width: 10px;
+        background-color: rgba(#7B98CE, .3);
+        position: relative;
+        left: 62px;
+        z-index: -1;
+        bottom: 120px;
+
+        @include mq() {
+          height: 120px;
+          width: 10px;
+          position: relative;
+          bottom: 100px;
+          left: 70px;
+        }
+      }
+    }
+  }
+
+  .pano {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include mq() {
+      padding: 90px;
+      background-image: url("/img/yıldırım.svg"), url("/img/koyuyaprak.svg");
+      background-repeat: no-repeat;
+      background-position-x: 350px, 800px;
+      background-position-y: 20px, 120px;
+    }
+
+    &-card {
+      width: 90%;
+      height: 10em;
+      border-radius: 20px;
+      background-color: #7B98CE;
+      color: #fff;
+      font-family: "Inter", serif;
+      display: flex;
+      align-items: center;
+
+      @include mq() {
+        width: 500px;
+        height: 10em;
+      }
+
+      &-text {
+        text-align: center;
+        font-size: 1.1em;
+        margin: 0;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq() {
+          padding: 20px;
+          font-size: 1.4em;
+        }
+      }
+    }
+  }
 }
 
 .h-title {
-    font-family: 'Quicksand',sans-serif;
-    color: #80BC00;
-    font-size: 2.7em;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    margin-top: 50px;
-    text-align: center;
-    font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  color: #80BC00;
+  font-size: 2.7em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
 
-    @include mq() {
-        font-size: 80px;
-    }
+  @include mq() {
+    font-size: 80px;
+  }
 }
 
 .panel {
-    height: 85px;
-    box-sizing: content-box;
+  height: 85px;
+  box-sizing: content-box;
 }
 
 .paragraph {
-    color: rgba(10, 38, 72);
-    opacity: 0.5;
-    width: 90%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+  color: rgba(10, 38, 72);
+  width: 90%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 
-    @include mq() {
-        width: 60%;
-    }
+  @include mq() {
+    width: 60%;
+  }
 }
 
 .paragraph-text {
-    margin-bottom: 25px;
-    margin-top: 25px;
-    font-family: "Inter", serif;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-family: "Inter", serif;
+  opacity: 0.5;
+
+  &:hover {
+    transition: 0.5s;
+    color: #232323;
+    opacity: 1;
+  }
 }
 
 .section-proje {
 
-    .box {
-        margin-top: 50px;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  .box {
+    margin-top: 50px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mq() {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 120px;
+      flex-direction: row;
+      gap: 10%;
+    }
+
+    .bg {
+      height: 150px;
+      width: 150px;
+      position: absolute;
+      left: 35%;
+      bottom: 170px;
+      z-index: -1;
+
+      @include mq() {
+        left: 50px;
+        height: 150px;
+        width: 150px;
+        bottom: 320px;
+      }
+    }
+
+    .box1 {
+      margin-top: 50px;
+      height: 250px;
+      width: 95%;
+      border: 5px solid #FDDF4D;
+      border-radius: 15px;
+      position: relative;
+
+      @include mq() {
+        width: 280px;
+        height: 400px;
+        margin: 0;
+      }
+
+      .box-title {
+        color: #80BC00;
+        font-size: 1.6em;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bolder;
 
         @include mq() {
-            display: flex;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 120px;
-            flex-direction: row;
-            gap: 10%;
+          margin-top: 80px;
+          font-size: 2em;
         }
+      }
 
-        .bg {
-            height: 150px;
-            width: 150px;
-            position: absolute;
-            left: 35%;
-            bottom: 170px;
-            z-index: -1;
+      .box-select {
+        background-color: #fff;
+        border-radius: 0;
+        border: 0;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 2px solid #80BC00;
+        color: rgba(gray, .5);
+        font-size: 1.2em;
+        margin-top: 20px;
+        padding-right: 30px;
+        width: 80%;
 
-            @include mq() {
-                left: 50px;
-                height: 150px;
-                width: 150px;
-                bottom: 320px;
-            }
+        @include mq() {
+          font-size: 1.2em;
+          margin-bottom: 50px;
+          margin-top: 50px;
+          padding-right: 10px;
         }
+      }
 
-        .box1 {
-            margin-top: 50px;
-            height: 250px;
-            width: 95%;
-            border: 5px solid #FDDF4D;
-            border-radius: 15px;
-            position: relative;
+      .box-button {
+        background-color: #80BC00;
+        color: #fff;
+        border-radius: 10px;
+        height: 40px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0;
 
-            @include mq() {
-                width: 280px;
-                height: 400px;
-                margin: 0;
-            }
-
-            .box-title {
-                color: #80BC00;
-                font-size: 1.6em;
-                text-align: center;
-                margin-top: 40px;
-
-                @include mq() {
-                    margin-top: 80px;
-                    font-size: 2em;
-                }
-            }
-
-            .box-select {
-                background-color: #fff;
-                border-radius: 0;
-                border: 0;
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-                border-bottom: 2px solid #80BC00;
-                color: rgba(gray, .5);
-                font-size: 1.2em;
-                margin-top: 20px;
-                padding-right: 30px;
-                width: 80%;
-
-                @include mq() {
-                    font-size: 1.5em;
-                    margin-bottom: 50px;
-                    margin-top: 50px;
-                    padding-right: 50px;
-                }
-            }
-
-            .box-button {
-                background-color: #80BC00;
-                color: #fff;
-                border-radius: 10px;
-                height: 40px;
-                margin-top: 15px;
-                display: flex;
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-                border: 0;
-
-                @include mq() {
-                    height: 15%;
-                    width: 50%;
-                    justify-content: center;
-                }
-            }
-
-
+        @include mq() {
+          height: 15%;
+          width: 50%;
+          justify-content: center;
         }
-
-        .box2 {
-            margin-top: 100px;
-            height: 250px;
-            width: 95%;
-            border: 5px solid #FDDF4D;
-            border-radius: 15px;
-            position: relative;
-
-            @include mq() {
-                width: 280px;
-                height: 400px;
-                margin: 0;
-            }
-
-            .bg {
-                height: 150px;
-                width: 150px;
-                position: absolute;
-                left: 35%;
-                bottom: 170px;
-                z-index: -1;
-
-                @include mq() {
-                    left: 50px;
-                    height: 150px;
-                    width: 150px;
-                    bottom: 320px;
-                }
-            }
-
-            .box-title {
-                color: #80BC00;
-                font-size: 1.6em;
-                text-align: center;
-                margin-top: 40px;
-
-                @include mq() {
-                    margin-top: 80px;
-                    font-size: 2em;
-                }
-            }
-
-            .box-select {
-                background-color: #fff;
-                border-radius: 0;
-                border: 0;
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-                border-bottom: 2px solid #80BC00;
-                color: rgba(gray, .5);
-                font-size: 1.2em;
-                margin-top: 20px;
-                padding-right: 30px;
-                width: 80%;
-
-                @include mq() {
-                    font-size: 1.5em;
-                    margin-bottom: 50px;
-                    margin-top: 50px;
-                    padding-right: 50px;
-                }
-            }
-
-            .box-button {
-                background-color: #80BC00;
-                color: #fff;
-                border-radius: 10px;
-                height: 40px;
-                margin-top: 15px;
-                display: flex;
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-                border: 0;
-
-                @include mq() {
-                    height: 15%;
-                    width: 50%;
-                    justify-content: center;
-                }
-            }
+      }
 
 
-        }
     }
+
+    .box2 {
+      margin-top: 100px;
+      height: 250px;
+      width: 95%;
+      border: 5px solid #FDDF4D;
+      border-radius: 15px;
+      position: relative;
+
+      @include mq() {
+        width: 280px;
+        height: 400px;
+        margin: 0;
+      }
+
+      .bg {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left: 35%;
+        bottom: 170px;
+        z-index: -1;
+
+        @include mq() {
+          left: 50px;
+          height: 150px;
+          width: 150px;
+          bottom: 320px;
+        }
+      }
+
+      .box-title {
+        color: #80BC00;
+        font-size: 1.6em;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bolder;
+        @include mq() {
+          margin-top: 80px;
+          font-size: 2em;
+        }
+      }
+
+      .box-select {
+        background-color: #fff;
+        border-radius: 0;
+        border: 0;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 2px solid #80BC00;
+        color: rgba(gray, .5);
+        font-size: 1.2em;
+        margin-top: 20px;
+        padding-right: 30px;
+        width: 80%;
+
+        @include mq() {
+          font-size: 1.1em;
+          margin-bottom: 50px;
+          margin-top: 50px;
+          padding-right: 10px;
+        }
+      }
+
+      .box-button {
+        background-color: #80BC00;
+        color: #fff;
+        border-radius: 10px;
+        height: 40px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0;
+
+        @include mq() {
+          height: 15%;
+          width: 50%;
+          justify-content: center;
+        }
+      }
+
+
+    }
+  }
 }
 
 .footer {
-    width: 100%;
-    height: 550px;
-    background-color: #2D2D2D;
-    margin-top: 100px;
+  width: 100%;
+  height: 550px;
+  background-color: #2D2D2D;
+  margin-top: 100px;
+
+  @include mq() {
+    height: 230px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include mq() {
-        height: 230px;
-        display: flex;
-        align-items: center;
+      flex-direction: row;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    &-element {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .ftr-yardım {
+      height: 150px;
+      width: 150px;
+      margin-top: 50px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 20px;
 
-        @include mq() {
-            flex-direction: row;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .ftr-yardım {
-            height: 150px;
-            width: 150px;
-            margin-top: 50px;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 20px;
-
-            @include mq() {
-                border: 0;
-                border-right: 2px solid #fff;
-                margin: 0;
-                padding-right: 30px;
-            }
-        }
-
-        .ftr-iilk {
-            height: 150px;
-            width: 150px;
-            border-bottom: 2px solid #fff;
-
-            @include mq() {
-                width: 300px;
-                border: 0;
-                margin: 0;
-                padding-left: 30px;
-                padding-right: 20px;
-            }
-        }
-
-        .ftr-link {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            gap: 10px;
-            margin-top: 10px;
-
-            @include mq() {
-                margin-left: auto;
-                margin-right: 0;
-                text-align: start;
-            }
-
-            .link-item {
-                text-decoration: none;
-                color: #fff;
-            }
-        }
+      @include mq() {
+        border: 0;
+        border-right: 2px solid #fff;
+        margin: 0;
+        padding-right: 30px;
+      }
     }
+
+    .ftr-iilk {
+      height: 150px;
+      width: 150px;
+      border-bottom: 2px solid #fff;
+
+      @include mq() {
+        width: 300px;
+        border: 0;
+        margin: 0;
+        padding-left: 30px;
+        padding-right: 20px;
+      }
+    }
+
+    .ftr-link {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      margin-top: 10px;
+
+      @include mq() {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: start;
+      }
+
+      .link-item {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          transition: 130ms;
+          border-bottom: 2px solid #80BC00;
+        }
+      }
+    }
+  }
+}
+
+.bos {
+  text-decoration: none;
 }

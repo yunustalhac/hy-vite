@@ -172,7 +172,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"/Users/yunustalhacoban/Desktop/hayrat-yardim-iyilik-enerjinle/img/arkaplan.png":[["arkaplan.ea32f9e3.png","img/arkaplan.png"],"img/arkaplan.png"],"/Users/yunustalhacoban/Desktop/hayrat-yardim-iyilik-enerjinle/img/yıldırım.svg":[["yıldırım.7092b649.svg","img/yıldırım.svg"],"img/yıldırım.svg"],"/Users/yunustalhacoban/Desktop/hayrat-yardim-iyilik-enerjinle/img/koyuyaprak.svg":[["koyuyaprak.a8a945eb.svg","img/koyuyaprak.svg"],"img/koyuyaprak.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/Users/yunustalhacoban/Desktop/hayrat yardım/hayrat-yardim-iyilik-enerjinle/img/arkaplan.png":[["arkaplan.ea32f9e3.png","img/arkaplan.png"],"img/arkaplan.png"],"/Users/yunustalhacoban/Desktop/hayrat yardım/hayrat-yardim-iyilik-enerjinle/img/yıldırım.svg":[["yıldırım.7092b649.svg","img/yıldırım.svg"],"img/yıldırım.svg"],"/Users/yunustalhacoban/Desktop/hayrat yardım/hayrat-yardim-iyilik-enerjinle/img/koyuyaprak.svg":[["koyuyaprak.a8a945eb.svg","img/koyuyaprak.svg"],"img/koyuyaprak.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57888" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54074" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
